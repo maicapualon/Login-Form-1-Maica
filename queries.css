@@ -1,0 +1,54 @@
+@media screen and (max-width: 1200px) {
+    .form-actions {
+        flex-direction: column;
+        gap: 15 px !important;
+    }
+}
+
+.form-actions button {
+    width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .form-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background: var(--primary-color);
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .wrapper::before {
+        width: 100%;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        top: 30px;
+        bottom: 30px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+}
+
+

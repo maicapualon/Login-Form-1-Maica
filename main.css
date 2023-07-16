@@ -1,0 +1,247 @@
+/* FONT FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* VARIABLES */
+:root{
+    --primary-color: #312ecb;
+    --secondary-color: #E3F0FF;
+    --cwhite: #fff;
+    --text-color: #353535;
+    --border-color: #D0D0D0;
+    --input-color: var(--border-color);
+    --link-color: #007AFF;
+}
+
+
+/* DEFAULT STYLE */
+*html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+body{
+    font-family: 'Montserrat', sans-serif; 
+    width: 100;
+    margin: 0;
+    background: var(--secondary-color);
+}
+
+.wrapper{
+    position: relative;
+    width: 100;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.wrapper::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 100;
+    width: 50%;
+    background: var(--primary-color);
+}
+
+.container{
+    position: relative;
+    max-width: 1084px;
+    margin: 0 auto;
+    height: 688px;
+    display: flex;
+    align-items: center;
+    background: var(--cwhite);
+    border-radius: 20px;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.login-image{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+/* NEW USER LINK */
+.new-user-link{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    color: var(--text-color);
+}
+
+.company-logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+form h1 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+form p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 37px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    padding: 0 15px;
+}
+
+input::placeholder {
+    color: var(--input-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.form-links a, .new-user-link span a{
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 0.3s;
+}
+
+.form-links a:hover, .new-user-link span a:hover {
+    color: rgb(235, 52, 82)
+}
+
+.form-actions {
+    display: flex;
+    gap: 27px;
+}
+
+.form-actions button {
+    font-family: inherit;
+    width: 50%;
+    height: 45px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}
+
+.form-actions .button-primary {
+    color: var(--cwhite);
+    background: var(--primary-color);
+}
+
+.form-actions .button-secondary {
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-actions .button-secondary img {
+    margin-right: 5px;
+    height: 15px;
+    width: 15px;
+}
+
+/* CHECK BOX ICON */
+.form-group-checkbox {
+    position: relative;
+    padding-left: 28px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.form-group-checkbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.form-group-checkbox .checkbox {
+    height: 19px;
+    width: 19px;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.form-group-checkbox .checkbox:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 8px;
+    border: solid var(--cwhite);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(-45deg);
+    transition: all 0.1s;
+}
+
+.form-group-checkbox:hover input ~ .checkbox {
+    background: #f1f1f1;
+}
+
+.form-group-checkbox input:checked ~ .checkbox {
+    background: var(--link-color);
+}
+
+.checkbox::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+}
+
+.form-group-checkbox input:checked ~ .checkbox::after {
+    opacity: 1;
+    transform: rotate(45deg);
+}
+
+.form-group-checkbox input:checked ~ .checkbox {
+    border: none;
+}
